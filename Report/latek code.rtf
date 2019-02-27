@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \\documentclass[conference]\{IEEEtran\}\
+%\\IEEEoverridecommandlockouts\
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.\
+\\usepackage\{cite\}\
+\\usepackage\{amsmath,amssymb,amsfonts\}\
+\\usepackage\{algorithmic\}\
+\\usepackage\{graphicx\}\
+\\usepackage\{textcomp\}\
+\\usepackage\{xcolor\}\
+\\def\\BibTeX\{\{\\rm B\\kern-.05em\{\\sc i\\kern-.025em b\}\\kern-.08em\
+    T\\kern-.1667em\\lower.7ex\\hbox\{E\}\\kern-.125emX\}\}\
+\\begin\{document\}\
+\
+\\title\{Inverting the Pyramid `Back'\\\\\
+\\large EAS 503 Project - FIFA World Cup 2018: Inside Out\
+\}\
+\
+\\author\{\
+\\IEEEauthorblockN\{Archit Singh\}\
+\\IEEEauthorblockA\{\\textit\{Graduate Student - Data Sciences\} \\\\\
+\\textit\{University at Buffalo\}\\\\\
+New York, United States \\\\\
+architsi@buffalo.edu\}\
+\\and\
+\\IEEEauthorblockN\{Aditya Sahay\}\
+\\IEEEauthorblockA\{\\textit\{Graduate Student - Data Sciences\} \\\\\
+\\textit\{University at Buffalo\}\\\\\
+New York, United States \\\\\
+asahay@buffalo.edu\}\
+\\and\
+\\IEEEauthorblockN\{Shubham Sharma\}\
+\\IEEEauthorblockA\{\\textit\{Graduate Student - Data Sciences\} \\\\\
+\\textit\{University at Buffalo\}\\\\\
+New York, United States \\\\\
+ss628@buffalo.edu\}\
+\}\
+\
+\\maketitle\
+\
+\\begin\{abstract\}\
+With the insurgence of big data and numerous efficient data mining techniques, a lot of domains have seen a positive delta in their performance KPIs and the field of sports is no exception. Over the years we have seen sports communities like NBA (National Basketball Association) and MLB (Major league Baseball) leverage the potential of growing data to plan their in-match / out-of-match strategies, increase their fan base, strategize the launch of events and what not. Soccer being the most popular sport worldwide has not remained untouched as well.\
+In our project we have tried to use the in-match data to analyze the performance of players as well as teams by defining metrics that have not been used before. The analysis could help a sports analytics firm or a football management team to look at the performance of their players and the strategies of the opponents which would enable them to take the required action. At the same time, we aim to glean out some counter intuitive and hidden insights which are not presented to the general audience.\
+We were able to achieve the above-mentioned goal by defining metrics that helped identify the strengths and weaknesses of different players and by drawing out insights that could look surprising to people who have been for long exposed to superficial analysis.\
+\
+\\end\{abstract\}\
+\
+\\section\{Introduction\}\
+The project is termed as \'91Inverting the Pyramid `Back' which is inspired by one of the famous books written on football by Jonathan Williams where he talks about how a sudden shift which was non-intuitive resulted in much better playing style and match results. Although we are not literally inverting the pyramid back, we have worked on analyzing the data in such a way which was not done before. We have analyzed the stream data of FIFA World Cup 2018 data to\
+\
+\\begin\{itemize\}\
+    \\item Glean out non-intuitive insights\
+    \\item Present highlights and low-lights of the tournament\
+    \\item Come up with interesting metrics to determine team's and player's performance.\
+\\end\{itemize\}\
+\
+\\section\{Analysis\}\
+\
+\\subsection\{Teams\}\
+\
+\\begin\{itemize\}\
+    \\item \
+    We have analyzed how the rankings and standings of all the teams changed compared to the pre-world cup period. We analyzed the performance of all the teams in the tournament and compared it to their standings from before the world cup. The post- world up rankings were decided on how far did the teams go in the tournament.\
+    \
+    \\item\
+    To help the spectators visualize a team\'92s journey we calculated the points accumulation of different teams after every match. The graph generated shows a step increase in the case of a win/draw. This graph helps us in understanding if the exit of one of the big teams was actually an upset or was it something that was likely to happen.\
+    \
+    \\item\
+    We have dissected the performance of all the teams to understand their work rate and playing style. To understand the work rate we calculated distance run by the teams for every goal that they scored. This helped us understand some unusual trends which are discussed in the conclusion. On the other side, we also looked at the number of passes made per goal scored by them. This helps us understand their playing style. The combination of these charts tells us if the teams were more of smart workers or hard workers. France and Croatia, which were the finalists lie towards the lower end which was counter intuitive for us.\
+    \
+    \\item\
+    To enable users look at a particular team and their performance at one place we analyzed the three aspects of the game: Attack, Defense and Midfield. Attack score was given based on \'96 Goals scored per game, Difficulty of the shots, number of successful dribbles per game. Defense score was given based on \'96 number of blocks, clearances, inverse of goals conceded, and number of saves made per match. Midfield score was assigned based on \'96 Possession, Passing accuracy and number of passes. These three dimensions along with the final performance of the team was shown using a bubble chart with Defense on x axis, Attack on y axis, size of the bubble denoting the Midfield and the color of the bubble representing performance of the team.\
+\\end\{itemize\}\
+\
+\\subsection\{Players\}Players were analyzed by categorizing them based on their playing positions \'96 Attack, Midfield and Defense.\
+\
+\\begin\{itemize\}\
+    \\item Attackers were analyzed going beyond the regular metrics that are used. Instead of just looking at scoring ratio we analyzed their shooting ability compared to the difficulty of shots they have attempted. This could help us compare two players having same scoring ratio. Bubble chart was used to show the different dimensions.\
+    \
+    \\item Midfielders were analyzed based on both the responsibilities they carry. Their ability to help build the game was assessed using the number of passes made per match. Their ability to defend the defenders was analyzed by looking at the number of times they got dispossessed. Both these metrics were compared by plotting them on a graph and players were segregated in 4 quadrants. \
+    \
+    \\item Analyzing defenders with the help of data is the most challenging task as their role and performance gets significant even when they are off the ball. For example, putting pressure on the opponent, maintaining an offside trap etc. We have tried to cover all the aspects of a defender\'92s game \'96 Discipline (number of cards shown), successful and unsuccessful tackles, clearances and blocks. Spider plot was chosen to show these 5 dimensions and to help us compare multiple players at the same time. In figure \\ref\{1\} we compare the performance of Samuel Y. Umtiti with Mats Hummels.\
+    \
+    \\item Since many scouts and teams have a preference to hire players with specific spread on ground during the game, we have plotted heatmaps of different players. This could help teams compare two players with similar results. For instance, Ngolo Kante and Henderson can be seen as similar players when it comes to midfield but by looking at their heatmap we can analyze the width in their games. On comparing the two players who play at the same position but with different playing styles we see that Ronaldo's movement and spread is more towards the goal scoring region (Figure \\ref\{2\}) as compared to Hazard who believes in operating up and down the field in order to assist the defense as well as attack (Figure \\ref\{3\}).\
+\
+\\end\{itemize\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=9.5cm]\{3.png\}\
+\\end\{center\}\
+\\caption\{Spider Plots for Defenders: Samuel Y. Umtiti \\& Mats Hummels\}\\label\{1\}\
+\\end\{figure\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=9.5cm]\{1.png\}\
+\\end\{center\}\
+\\caption\{Heat Map of Christiano Ronaldo\}\\label\{2\}\
+\\end\{figure\}\
+\
+\\begin\{figure\}[!htbp]\
+\\begin\{center\}\
+\\includegraphics[width=9.5cm]\{2.png\}\
+\\end\{center\}\
+\\caption\{Heat Map of Eden Hazard\}\\label\{3\}\
+\\end\{figure\}\
+\
+\\section\{Results\}\
+As mentioned in the goal of the project we were attempting to extract some insights which were counter-intuitive which we were able to achieve with the help of all the analysis done on the highly granular data available. Some of the highlights are:\
+\
+\\begin\{itemize\}\
+\
+    \\item Although Brazil didn\'92t advance till the end stages of the tournament, Neymar stands out at someone with the best shooting ability as compared to the Golden boot winner who scored 30\\% of the goals in the form of penalties.\
+    \
+    \\item France stands 13th in the standings when talked about distance run in a match. Also, it stands at 5th in terms of passes made. France has shown us how to excel even with less work rate and less passes.\
+\
+\\end\{itemize\}\
+\
+\\section\{Conclusions\}\
+\
+\\begin\{itemize\}\
+    \\item Although aggregated data make a good cover story of how a match or a tournament went but it\'92s the in-match data that helps us unlock the hidden trends.\
+    \
+    \\item When analyzing a player\'92s performance, it gets very crucial to look at multiple aspects of their performance which proves helpful in numerous ways.\
+\
+\\end\{itemize\}\
+\
+\\section*\{References\}\
+\
+All the data that were used for this analysis, have been taken from StatsBomb \\cite\{b1\}.\
+\
+\\begin\{thebibliography\}\{00\}\
+\\bibitem\{b1\} Ted Knutson, author, StatsBomb. \
+https://statsbomb.com/2018/09/statsbomb-release-free-fifa-world-cup-data/\
+\\end\{thebibliography\}\
+\\vspace\{12pt\}\
+\
+\\end\{document\}\
+}
