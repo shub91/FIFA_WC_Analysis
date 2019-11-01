@@ -10,4 +10,4 @@ Links:
 
 [Data](https://github.com/statsbomb/open-data/tree/master/data) <br>
 
-[Article](http://ssharma.co.nf/fifa-wc-2018-analysis/)
+[Article](https://www.linkedin.com/pulse/inverting-pyramid-back-shubham-sharma/)
